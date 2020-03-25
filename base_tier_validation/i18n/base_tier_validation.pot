@@ -97,10 +97,10 @@ msgid "Active"
 msgstr ""
 
 #. module: base_tier_validation
-#. odoo-javascript
-#: code:addons/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml:0
+#. openerp-web
+#: code:addons/base_tier_validation/static/src/xml/systray.xml:0
 #, python-format
-msgid "Activity"
+msgid "Activities"
 msgstr ""
 
 #. module: base_tier_validation
