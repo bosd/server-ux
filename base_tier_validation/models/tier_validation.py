@@ -449,8 +449,12 @@ class TierValidation(models.AbstractModel):
         if hasattr(self, post) and hasattr(self, subscribe):
             for rec in self.sudo():
                 users_to_notify = tier_reviews.filtered(
+<<<<<<< HEAD
                     lambda r, x=rec: r.definition_id.notify_on_create
                     and r.res_id == x.id
+=======
+                    lambda r: r.definition_id.notify_on_create and r.res_id == rec.id  # noqa: B023
+>>>>>>> 4aa7612a ([MIG] base_tier_validation: Migration to 17.0)
                 ).mapped("reviewer_ids")
                 # Subscribe reviewers and notify
                 if len(users_to_notify) > 0:

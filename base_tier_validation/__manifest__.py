@@ -3,7 +3,11 @@
 {
     "name": "Base Tier Validation",
     "summary": "Implement a validation process based on tiers.",
+<<<<<<< HEAD
     "version": "13.0.1.0.2",
+=======
+    "version": "17.0.1.0.0",
+>>>>>>> 4aa7612a ([MIG] base_tier_validation: Migration to 17.0)
     "development_status": "Mature",
     "maintainers": ["LoisRForgeFlow"],
     "category": "Tools",
