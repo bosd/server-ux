@@ -25,10 +25,11 @@
     ],
     "assets": {
         "web.assets_backend": [
-            "/base_tier_validation/static/src/components/reviewer/tier_review_menu.esm.js",
-            "/base_tier_validation/static/src/components/reviewer/tier_review_menu.xml",
-            "/base_tier_validation/static/src/scss/review.scss",
-            "/base_tier_validation/static/src/js/tier_review_widget.esm.js",
+            "/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.esm.js",
+            "/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml",
+            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.esm.js",
+            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.scss",
+            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml",
             # "/base_tier_validation/static/src/js/review_notification_handler.esm.js",
             "/base_tier_validation/static/src/xml/**/*",
         ],

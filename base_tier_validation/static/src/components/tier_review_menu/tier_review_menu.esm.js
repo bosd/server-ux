@@ -13,7 +13,7 @@ export class TierReviewMenu extends Component {
     setup() {
         this.discussSystray = useDiscussSystray();
         this.orm = useService("orm");
-        this.store = useState(useService("mail.store"));
+        this.store = useState({reviewCounter: 0, reviewGroups: []});
         this.action = useService("action");
         this.fetchSystrayReviewer();
     }
@@ -23,8 +23,8 @@ export class TierReviewMenu extends Component {
         for (const group of groups) {
             total += group.pending_count || 0;
         }
-        this.store.tierReviewCounter = total;
-        this.store.tierReviewGroups = groups;
+        this.store.reviewCounter = total;
+        this.store.reviewGroups = groups;
     }
     onBeforeOpen() {
         this.fetchSystrayReviewer();
