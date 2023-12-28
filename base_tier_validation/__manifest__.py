@@ -3,11 +3,7 @@
 {
     "name": "Base Tier Validation",
     "summary": "Implement a validation process based on tiers.",
-<<<<<<< HEAD
-    "version": "13.0.1.0.2",
-=======
     "version": "17.0.1.0.0",
->>>>>>> 4aa7612a ([MIG] base_tier_validation: Migration to 17.0)
     "development_status": "Mature",
     "maintainers": ["LoisRForgeFlow"],
     "category": "Tools",
@@ -29,12 +25,12 @@
     ],
     "assets": {
         "web.assets_backend": [
-            "/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.esm.js",
-            "/base_tier_validation/static/src/components/tier_review_menu/tier_review_menu.xml",
-            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.esm.js",
-            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.scss",
-            "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml",
-            "/base_tier_validation/static/src/js/services/tier_review_service.esm.js",
+            "/base_tier_validation/static/src/components/reviewer/tier_review_menu.esm.js",
+            "/base_tier_validation/static/src/components/reviewer/tier_review_menu.xml",
+            # "/base_tier_validation/static/src/scss/review.scss",
+            # "/base_tier_validation/static/src/js/tier_review_widget.esm.js",
+            # "/base_tier_validation/static/src/js/review_notification_handler.esm.js",
+            # "/base_tier_validation/static/src/xml/**/*",
         ],
     },
 }
