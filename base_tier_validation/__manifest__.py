@@ -30,7 +30,7 @@
             "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.esm.js",
             "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.scss",
             "/base_tier_validation/static/src/components/tier_review_widget/tier_review_widget.xml",
-            # "/base_tier_validation/static/src/js/review_notification_handler.esm.js",
+            "/base_tier_validation/static/src/js/services/tier_review_service.esm.js",
             "/base_tier_validation/static/src/xml/**/*",
         ],
     },
