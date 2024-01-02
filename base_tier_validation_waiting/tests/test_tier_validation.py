@@ -17,7 +17,7 @@ class TierTierValidation(TransactionCase):
             context=dict(
                 cls.env.context,
                 **DISABLED_MAIL_CONTEXT,
-                testing_base_tier_validation_waiting=True
+                testing_base_tier_validation_waiting=True,
             )
         )
         cls.loader = FakeModelLoader(cls.env, cls.__module__)
