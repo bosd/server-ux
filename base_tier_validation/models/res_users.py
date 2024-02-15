@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from collections import defaultdict
+
 from odoo import api, fields, models, modules
 
 
@@ -21,13 +22,23 @@ class Users(models.Model):
             order="id desc",
             limit=1000,
         )
-        user_reviews_by_record_by_model_name = defaultdict(lambda: defaultdict(lambda: self.env["tier.review"]))
+        user_reviews_by_record_by_model_name = defaultdict(
+            lambda: defaultdict(lambda: self.env["tier.review"])
+        )
         for review in user_reviews:
             record = self.env[review.model].browse(review.res_id)
             user_reviews_by_record_by_model_name[review.model][record] += review
-        model_ids = list({self.env["ir.model"]._get(name).id for name in user_reviews_by_record_by_model_name.keys()})
+        model_ids = list(
+            {
+                self.env["ir.model"]._get(name).id
+                for name in user_reviews_by_record_by_model_name.keys()
+            }
+        )
         user_reviews = {}
-        for model_name, user_reviews_by_record in user_reviews_by_record_by_model_name.items():
+        for (
+            model_name,
+            user_reviews_by_record,
+        ) in user_reviews_by_record_by_model_name.items():
             domain = [("id", "in", list({r.id for r in user_reviews_by_record.keys()}))]
             Model = self.env[model_name]
             allowed_records = Model.search(domain)
@@ -52,7 +63,6 @@ class Users(models.Model):
                     user_reviews[model_name]["pending_count"] += 1
         return list(user_reviews.values())
         # todo add test https://github.com/odoo/odoo/commit/a3260cfcd75f2804cf6aec916fdb159cddcca74f
-
 
     @api.model
     def get_reviews(self, data):
