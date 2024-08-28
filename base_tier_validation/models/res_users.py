@@ -24,7 +24,7 @@ class Users(models.Model):
             if reviews:
                 records = (
                     self.env[model]
-                    .sudo()
+                    .with_user(self.env.user)
                     .search([("id", "in", reviews.mapped("res_id"))])
                     .filtered(lambda x: not x.rejected and x.can_review)
                 )
